@@ -1,4 +1,4 @@
-package main.java.com.pollka.service.user;
+package com.pollka.service.user;
 
 import com.pollka.model.User;
 

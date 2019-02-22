@@ -1,28 +1,46 @@
-package main.java.com.pollka.model;
+package com.pollka.model;
 
 import com.sun.istack.internal.NotNull;
 
+import javax.validation.constraints.Future;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Past;
 import java.util.Date;
 
 public class Question {
 
     private int id;
     @NotNull
+    @NotEmpty
     private String name;
     @NotNull
     private Date startDate;
     @NotNull
     private Date endDate;
+    @NotNull
+    @NotEmpty
     private String type;
+    @NotNull
+    @NotEmpty
+    private String description;
 
-    public Question(String name, Date startDate, Date endDate, String type) {
+    public Question(@NotNull @NotEmpty String name,
+                    @NotNull Date startDate,
+                    @NotNull Date endDate,
+                    @NotNull @NotEmpty String type,
+                    @NotNull @NotEmpty String description) {
         this.name = name;
         this.startDate = startDate;
         this.endDate = endDate;
         this.type = type;
     }
 
-    public Question(int id, String name, Date startDate, Date endDate, String type) {
+    public Question(int id,
+                    @NotNull @NotEmpty String name,
+                    @NotNull Date startDate,
+                    @NotNull Date endDate,
+                    @NotNull @NotEmpty String type,
+                    String description){
         this.id = id;
         this.name = name;
         this.startDate = startDate;
@@ -68,5 +86,31 @@ public class Question {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Question question = (Question) o;
+        return getId() == question.getId() &&
+                getName().equals(question.getName()) &&
+                getStartDate().equals(question.getStartDate()) &&
+                getEndDate().equals(question.getEndDate()) &&
+                getType().equals(question.getType()) &&
+                getDescription().equals(question.getDescription());
+    }
+
+    @Override
+    public int hashCode() {
+        return id;
     }
 }

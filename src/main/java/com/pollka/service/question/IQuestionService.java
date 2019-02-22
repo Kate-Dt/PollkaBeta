@@ -1,6 +1,7 @@
-package main.java.com.pollka.service.question;
+package com.pollka.service.question;
 
-import main.java.com.pollka.model.Question;
+import com.pollka.model.Question;
+import com.pollka.model.User;
 
 import java.util.List;
 
@@ -14,4 +15,5 @@ public interface IQuestionService {
     List<Question> getAll();
     List<Question> getQuestionsByName(String name);
     List<Question> getQuestionsByType(String type);
+    List<Question> getQuestionsByUser(User user);
 }
