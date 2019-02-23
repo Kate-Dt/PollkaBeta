@@ -19,9 +19,9 @@ public class User {
     @NotEmpty
     private String password;
 
-    public User(@NotNull @NotEmpty @Email String email,
-                @NotNull @NotEmpty String login,
-                @NotNull @NotEmpty String password) {
+    public User(String email,
+                String login,
+                String password) {
         this.email = email;
         this.login = login;
         this.password = password;

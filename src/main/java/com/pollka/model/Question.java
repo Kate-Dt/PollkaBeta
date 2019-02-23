@@ -23,11 +23,11 @@ public class Question {
     @NotEmpty
     private String description;
 
-    public Question(@NotNull @NotEmpty String name,
-                    @NotNull Date startDate,
-                    @NotNull Date endDate,
-                    @NotNull @NotEmpty String type,
-                    @NotNull @NotEmpty String description) {
+    public Question(String name,
+                    Date startDate,
+                    Date endDate,
+                    String type,
+                    String description) {
         this.name = name;
         this.startDate = startDate;
         this.endDate = endDate;
@@ -36,11 +36,11 @@ public class Question {
     }
 
     public Question(int id,
-                    @NotNull @NotEmpty String name,
-                    @NotNull Date startDate,
-                    @NotNull Date endDate,
-                    @NotNull @NotEmpty String type,
-                    @NotNull @NotEmpty String description){
+                    String name,
+                    Date startDate,
+                    Date endDate,
+                    String type,
+                    String description){
         this.id = id;
         this.name = name;
         this.startDate = startDate;

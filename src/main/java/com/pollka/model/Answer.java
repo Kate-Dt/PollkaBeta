@@ -9,7 +9,7 @@ public class Answer {
     @NotEmpty
     private String name;
 
-    public Answer(int id, @NotNull @NotEmpty String name) {
+    public Answer(int id, String name) {
         this.id = id;
         this.name = name;
     }
