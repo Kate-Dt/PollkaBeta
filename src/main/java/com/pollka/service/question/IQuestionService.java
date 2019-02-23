@@ -2,7 +2,6 @@ package com.pollka.service.question;
 
 import com.pollka.model.Question;
 import com.pollka.model.User;
-
 import java.util.List;
 
 public interface IQuestionService {
@@ -15,5 +14,5 @@ public interface IQuestionService {
     List<Question> getAll();
     List<Question> getQuestionsByName(String name);
     List<Question> getQuestionsByType(String type);
-    List<Question> getQuestionsByUser(User user);
+    List<Question> getQuestionsByUser(User user);//questions created by user
 }

@@ -3,7 +3,6 @@ package com.pollka.service.answer;
 import com.pollka.model.Answer;
 import com.pollka.model.Question;
 import com.pollka.model.User;
-
 import java.util.List;
 
 public class AnswerService implements IAnswerService {

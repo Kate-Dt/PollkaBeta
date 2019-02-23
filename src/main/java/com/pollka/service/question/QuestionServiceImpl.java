@@ -2,7 +2,6 @@ package com.pollka.service.question;
 
 import com.pollka.model.Question;
 import com.pollka.model.User;
-
 import java.util.List;
 
 public class QuestionServiceImpl implements IQuestionService{

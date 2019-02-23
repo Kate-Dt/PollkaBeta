@@ -1,8 +1,6 @@
 package com.pollka.model;
 
 import com.sun.istack.internal.NotNull;
-
-import javax.validation.constraints.Future;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Past;
 import java.util.Date;
@@ -14,6 +12,7 @@ public class Question {
     @NotEmpty
     private String name;
     @NotNull
+    @Past
     private Date startDate;
     @NotNull
     private Date endDate;
@@ -33,6 +32,7 @@ public class Question {
         this.startDate = startDate;
         this.endDate = endDate;
         this.type = type;
+        this.description = description;
     }
 
     public Question(int id,
@@ -40,12 +40,13 @@ public class Question {
                     @NotNull Date startDate,
                     @NotNull Date endDate,
                     @NotNull @NotEmpty String type,
-                    String description){
+                    @NotNull @NotEmpty String description){
         this.id = id;
         this.name = name;
         this.startDate = startDate;
         this.endDate = endDate;
         this.type = type;
+        this.description = description;
     }
 
     public int getId() {
